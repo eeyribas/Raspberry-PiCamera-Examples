@@ -8,7 +8,7 @@ with picamera.PiCamera() as camera:
 
         while True:
             camera.capture(stream, 'bgr', use_video_port=True)
-            cv2.imshow('Kamera Goruntusu', stream.array)
+            cv2.imshow('Camera Images', stream.array)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
             stream.seek(0)
